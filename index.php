@@ -23,17 +23,16 @@
 </head>
 <body class="bg-light">
 
-
-<div id="fullWidthSlider" class="carousel slide" data-bs-ride="carousel">
+<div id="fullWidthSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="s1.png" class="d-block w-100" alt="Slide 1">
+            <img src="s1.png" class="d-block" alt="Slide 1">
         </div>
         <div class="carousel-item">
-            <img src="s2.png" class="d-block w-100" alt="Slide 2">
+            <img src="s2.png" class="d-block" alt="Slide 2">
         </div>
         <div class="carousel-item">
-            <img src="s3.png" class="d-block w-100" alt="Slide 3">
+            <img src="s3.png" class="d-block" alt="Slide 3">
         </div>
     </div>
 
@@ -394,6 +393,6 @@
 
 
 <script src="langIndex.js"></script>
-<script src="slideIndex.js"></script>
+<!-- <script src="slideIndex.js"></script> -->
 </body>
 </html>
