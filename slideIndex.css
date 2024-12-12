@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-}
-
 .slider-container {
     position: relative;
     width: 80%; /* Adjust the width of the slider */
@@ -125,18 +120,4 @@ body {
     right: 0;
     bottom: 0;
     transform: rotateY(calc(90deg * var(--i))) translateZ(500px); /* Stack slides in a circular fashion */
-}
-
-/* Adding dynamic animation timing */
-.slide:nth-child(1) {
-    --i: 0;
-}
-.slide:nth-child(2) {
-    --i: 1;
-}
-.slide:nth-child(3) {
-    --i: 2;
-}
-.slide:nth-child(4) {
-    --i: 3;
 }

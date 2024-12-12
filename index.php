@@ -23,7 +23,7 @@
 </head>
 <body class="bg-light">
 
-<div id="fullWidthSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+<div id="fullWidthSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="s1.png" class="d-block" alt="Slide 1">
@@ -331,68 +331,6 @@
     </div>
 </footer>
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Function to check if element is in viewport
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return rect.top >= 0 && rect.bottom <= window.innerHeight;
-    }
-
-    // Add 'visible' class to elements when they come into view
-    function handleScroll() {
-        const elements = document.querySelectorAll('.fade-in');
-        elements.forEach(function (element) {
-            if (isInViewport(element)) {
-                element.classList.add('visible');
-            }
-        });
-
-        // For the product title specifically
-        const productTitle = document.querySelector('.product-title');
-        if (productTitle && isInViewport(productTitle)) {
-            productTitle.classList.add('visible');
-        }
-    }
-
-
-    // Run handleScroll function when the page is scrolled
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Call initially in case items are already in view
-});
-
-</script>
-
-<script>
-    // ฟังก์ชันสำหรับตรวจสอบตำแหน่งของ element
-    const aboutTitle = document.querySelector('.About-title');
-    const cards = document.querySelectorAll('.card-item');
-
-    const checkVisibility = () => {
-        const aboutRect = aboutTitle.getBoundingClientRect();
-        if (aboutRect.top >= 0 && aboutRect.bottom <= window.innerHeight) {
-            aboutTitle.classList.add('visible');
-        }
-
-        // ตรวจสอบการแสดงการ์ด
-        cards.forEach(card => {
-            const cardRect = card.getBoundingClientRect();
-            if (cardRect.top >= 0 && cardRect.bottom <= window.innerHeight) {
-                card.classList.add('visible');
-            }
-        });
-    };
-
-    // เรียกใช้ฟังก์ชันเมื่อเลื่อน
-    window.addEventListener('scroll', checkVisibility);
-    // เรียกใช้ฟังก์ชันทันทีเมื่อโหลดหน้า
-    checkVisibility();
-</script>
-
-
-
 <script src="langIndex.js"></script>
-<!-- <script src="slideIndex.js"></script> -->
 </body>
 </html>
