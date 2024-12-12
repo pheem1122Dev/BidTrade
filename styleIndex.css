@@ -1,0 +1,211 @@
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.card {
+    border: none; /* ลบเส้นขอบ */
+    border-radius: 15px; /* มุมโค้งมน */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงา */
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-15px); /* ขยับการ์ดขึ้นเมื่อ hover */
+}
+.btn {
+    border-radius: 50px; /* ปุ่มแบบโค้งมน */
+}
+.container {
+    position: relative;
+}
+.category-list {
+    padding: 20px;
+    background: #f8f9fa;
+}
+.category-list h5 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.category-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.category-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+.divider {
+    border-right: 2px solid #ddd;
+}
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+/* Background transparency and box shadow for navbar */
+.navbar {
+background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+backdrop-filter: blur(10px); /* Blurred background */
+}
+
+.navbar .dropdown-menu {
+background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque for dropdown */
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Dropdown shadow */
+}
+
+.searchbar input {
+border: none;
+background: transparent;
+outline: none;
+padding: 5px;
+transition: border-color 0.3s ease;
+}
+
+.searchbar input:focus {
+border-color: #007bff;
+}
+
+.search_icon {
+color: #007bff;
+margin-left: 5px;
+cursor: pointer;
+}
+
+.form-control:focus {
+border-color: #007bff;
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.About-title, .card-item {
+    opacity: 1;
+    transform: translateY(50px); /* เลื่อนลงจากด้านบน */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* ทำให้แอนิเมชันนุ่มนวล */
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* เลื่อนขึ้น */
+}
+
+/* ปรับแอนิเมชันของข้อความ */
+.About-title {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* เพิ่มเล็กน้อยแอนิเมชันของการ์ด */
+.card-item {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* ปรับให้พื้นหลังของ Footer มีความโปร่งใส */
+.bg-dark-transparent {
+    background-color: rgba(0, 0, 0, 0.6); /* ใช้สีดำโปร่งใส */
+}
+
+/* ปรับสีตัวหนังสือให้ชัดเจน */
+footer h5, footer p, footer a {
+    color: #fff; /* สีข้อความให้เป็นสีขาว */
+}
+
+footer a:hover {
+    color: #007bff; /* เปลี่ยนสีเมื่อมีการ hover */
+}
+
+/* เพิ่มตัวหนาให้กับหัวข้อ */
+footer h5 {
+    font-weight: bold;
+}
+
+/* Container สำหรับแสดงการ์ด */
+.product-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+/* การ์ดสินค้า */
+.product-card {
+    width: 250px; /* ขนาดของการ์ด */
+    border-radius: 10px; /* ขอบมุมโค้ง */
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงา */
+    transition: transform 0.3s ease; /* เอฟเฟกต์เมื่อวางเมาส์ */
+    display: inline-block; /* ทำให้การ์ดแสดงในแนวนอน */
+} 
+
+.product-card:hover {
+    transform: translateY(-10px); /* ยกการ์ดขึ้นเล็กน้อยเมื่อ hover */
+}
+
+/* รูปภาพสินค้า */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ข้อมูลในการ์ด */
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+/* ราคา */
+.product-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ส่วนลด */
+.product-discount {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #ff5722; /* สีสำหรับส่วนลด */
+    font-weight: bold;
+}
+
+/* วันที่ */
+.product-date {
+    font-size: 0.9em;
+    color: #777777; /* สีเทาอ่อน */
+}
+
+/* สำหรับการจัดการเมื่อหน้าจอเล็กลง */
+@media screen and (max-width: 768px) {
+    .product-container {
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 200px;
+    }
+}

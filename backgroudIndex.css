@@ -1,0 +1,99 @@
+/* ตั้งค่าพื้นหลัง */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ปรับแต่งภาพพื้นหลัง */
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(5px); /* ใช้ blur ให้ภาพเบลอ เพื่อทำให้เนื้อหาชัดเจน */
+}
+
+/* กำหนดการจัดตำแหน่งกรอบ */
+.content-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 20px; /* ปรับให้กรอบออกจากขอบซ้ายเล็กน้อย */
+    transform: translateY(-50%); /* ยังคงใช้ translateY เพื่อจัดตำแหน่งแนวตั้ง */
+    width: 550px; /* ขนาดของกรอบ */
+    padding: 10px; /* เพิ่ม padding ให้กรอบมีระยะห่างจากขอบ */
+    background-color: rgba(255, 255, 255, 0.429); /* สีพื้นหลังโปร่งแสง */
+    border-radius: 9px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* กรอบข้อความทั้งหมด */
+.content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+/* การจัดแต่งหัวข้อ */
+.scrolling-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00bfff; /* ฟ้าสว่าง */
+    margin-bottom: 20px;
+}
+
+/* การจัดแต่งข้อความพารากราฟ */
+.content p {
+    font-size: 1.2em;
+    color: #555; /* สีเทาอ่อน */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ปุ่ม CTA */
+.cta-button {
+    padding: 15px 30px;
+    background-color: #00bfff; /* ฟ้าสว่าง */
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* เอฟเฟกต์เมื่อวางเมาส์บนปุ่ม */
+.cta-button:hover {
+    background-color: #008ccf; /* ฟ้าที่เข้มขึ้น */
+}
+
+/* ปรับให้เหมาะสมกับขนาดหน้าจอมือถือ */
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        width: 90%;
+    }
+
+    .scrolling-text {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.226); /* ทำให้พื้นหลังโปร่งใส */
+}
+
+

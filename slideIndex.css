@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%; /* Adjust the width of the slider */
+    height: 80vh; /* Adjust the height to fit the design */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px; /* Rounded corners for a sleek look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    perspective: 1500px; /* Enable 3D space */
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    transition: transform 1s ease-in-out; /* Smooth transition for rotation */
+    transform-style: preserve-3d; /* Ensure the slides maintain their 3D positioning */
+    animation: rotateSlider 10s infinite linear; /* Apply continuous rotation */
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Fade in effect for each slide */
+    transform-origin: center center; /* Ensure the rotation happens around the center */
+    border-radius: 15px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 15px; /* Rounded image edges */
+}
+
+.slide:hover img {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.controls span {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    color: white;
+    font-size: 2rem;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.controls span:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Soft glow effect on hover */
+}
+
+/* Fade-in effect for each slide */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply rotating carousel effect to the slider */
+@keyframes rotateSlider {
+    0% {
+        transform: rotateY(0deg);
+    }
+    25% {
+        transform: rotateY(90deg); /* Rotate 90 degrees */
+    }
+    50% {
+        transform: rotateY(180deg); /* Rotate 180 degrees */
+    }
+    75% {
+        transform: rotateY(270deg); /* Rotate 270 degrees */
+    }
+    100% {
+        transform: rotateY(360deg); /* Complete a full rotation */
+    }
+}
+
+/* Adjust the slides for 3D stacking */
+.slider {
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(45deg); /* Give the impression of a rotating carousel */
+    transform-style: preserve-3d;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(500px); /* Stack slides in a circular fashion */
+}
+
+/* Adding dynamic animation timing */
+.slide:nth-child(1) {
+    --i: 0;
+}
+.slide:nth-child(2) {
+    --i: 1;
+}
+.slide:nth-child(3) {
+    --i: 2;
+}
+.slide:nth-child(4) {
+    --i: 3;
+}

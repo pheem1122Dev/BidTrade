@@ -1,0 +1,137 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(227, 251, 252, 0.5); /* โปร่งใส (ปรับค่า alpha) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Brand Text Styling */
+.brand-text {
+    font-size: 32px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #1ec4f2, #76d1f9, #a0e0ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shimmer 3s infinite;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    padding: 8px 12px;
+    font-weight: bold;
+    color: #1ec4f2;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle:hover {
+    color: #007ea7; /* Slightly darker blue on hover */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+    overflow: hidden; /* Removes sharp borders */
+}
+
+/* Dropdown Items Styling */
+.dropdown-item {
+    padding: 10px 15px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #e3f5fc; /* Light blue on hover */
+    color: #007ea7;
+}
+
+/* Display dropdown menu when open */
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+/* Content Styling */
+.content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1, p {
+    color: #333;
+}
+
+#action-button {
+    background-color: #1ec4f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#action-button:hover {
+    background-color: #007ea7;
+}
+
+/* Shimmer Effect for Brand Text */
+@keyframes shimmer {
+    0% {
+        background-position: -150px 0;
+    }
+    100% {
+        background-position: 150px 0;
+    }
+}
+
+
+เพิ่มเอฟเฟ็กต์เมื่อเลื่อนมาที่ element
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-title {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.product-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* สำหรับการ์ด */
+.card {
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
