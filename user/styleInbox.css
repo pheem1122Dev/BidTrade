@@ -1,0 +1,245 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.img-logo{
+    width: 50px;
+    height: 50px;
+}
+
+.row{
+    width: 100%;
+}
+
+
+.left-side img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.left-side label{
+    font-size: 13px;
+    font-weight: bold;
+    color: blue;
+}
+
+.compose-mail {
+    border-radius: 30px;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.compose-mail:hover{
+    background-color: aqua;
+    transform: scale(1.05);
+}
+
+.link-group {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.link-group a{
+    color: grey;
+    padding: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link-group a:hover{
+    color: blue;
+    transform: scale(1.05);
+}
+
+.link-group a:last-child:hover{
+    color: red;
+    transform: scale(1.05);
+}
+
+.col-md-3 {
+    background-color: #f8f9fa;
+}
+
+.card-inbox-mail {
+    margin-top: 10px;
+    width: 100%;
+    border: 2px solid lightgrey;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.card-inbox-mail:hover {
+    transform: scale(1.05);
+    border-color: aqua;
+}
+
+.card-inbox-mail img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-no-mail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.card-no-mail img{
+    width: 100px;
+    height: 100px;
+}
+
+.card-no-mail label{
+    font-size: 16px;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-container .username{
+    color: lightskyblue;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.text-container .header-inbox{
+    color: black;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.text-container p{
+    color: grey;
+    font-size: 13px;
+}
+
+.col-md-7 {
+    border-radius: 5px;
+}
+
+.email-container {
+    max-width: 100%;
+    margin: 10px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.email-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.email-header .reply-sn i{
+    transform: Scale(1.75);
+    color: grey;
+}
+
+.reply-sender-info h2{
+    font-size: 18px;
+    color: grey;
+    padding: 10px;
+}
+
+.col-md-7 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.sender-info h2 {
+    font-size: 18px;
+}
+
+.sender-info p {
+    font-size: 14px;
+    color: gray;
+}
+
+.email-subject {
+    margin-bottom: 15px;
+}
+
+.email-subject h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.email-body {
+    margin-top: 20px;
+    color: #333;
+}
+
+.email-body p {
+    margin: 10px 0;
+}
+
+.email-actions {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+}
+
+.email-actions a {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: none;
+    color: grey;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.email-actions a:hover {
+    transform: scale(1.05);
+    color: blue;
+}
+
+.email-actions a:last-child:hover{
+    transform: scale(1.05);
+    color: red;
+}
+
+.add-email-body textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+    min-height: 100px;
+}
+
+.add-email-body .btn{
+    border-radius: 20px;
+    width: 100px;
+    transition: transform 0.3s ease box-shadow 0.3s ease;
+}
+
+.add-email-body .btn:hover{
+    transform: Scale(1.025);
+    box-shadow: 0px 0px 10px lightskyblue;
+}

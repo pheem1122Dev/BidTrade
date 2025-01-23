@@ -1,0 +1,50 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 90%;
+    max-height: 90%;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-header .btn{
+    background-color: white;
+    box-shadow: 0 0 2px black;
+    transition: transform 0.3s ease;
+}
+
+.card-header .btn:hover{
+    transform: scale(1.05);
+}
+
+.card-body{
+    overflow-y: auto;
+}
+
+.table{
+    display:inline-table;
+    justify-content: center;
+}
+
+.product-img{
+    display: flex;
+    gap: 10px;
+}
+
+.product-img img{
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px black;
+}

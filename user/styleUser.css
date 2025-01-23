@@ -1,0 +1,146 @@
+body{
+    width: 100vw;
+    margin-top: 100px;
+}
+
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-wrapper .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-wrapper .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.card-wrapper .card img {
+    margin: 10px 10px 0 10px;
+    width: 90%;
+    box-shadow : 0 0 4px lightgrey;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-wrapper .card img:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+/* make card-title center */
+.card-wrapper .card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-startprice {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.number-startprice {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.card-timeleft {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.bid-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bid-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: lightcyan;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.slide-header {
+    width: fit-content;
+    margin: auto;
+    border-bottom: 10px solid aqua;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: blue;
+    opacity: 0; /* เริ่มต้นให้โปร่งใส */
+    transform: translateY(20px); /* ย้ายลงเล็กน้อย */
+    animation: slide-headerfadeIn 1s ease-out forwards; /* เรียกใช้งานแอนิเมชัน */
+}
+/* Animation สำหรับการค่อยๆแสดงผล */
+@keyframes slide-headerfadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.card {
+    width: 75%;
+}
+
+.card-body .img-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.img-group img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.img-group .img-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
